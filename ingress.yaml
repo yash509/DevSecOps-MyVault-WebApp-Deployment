@@ -1,23 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pe-wa-ingress
+  name: pvt-vault-ingress
 spec:
   rules:
-  - host: pe-wa
+  - host: pvt-vault
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: pe-wa-service
+            name: pvt-vault-service
             port:
-              number: 5000 #80
+              number: 3000 #80
       - path: /app
         pathType: Prefix
         backend:
           service:
-            name: pe-wa-service
+            name: pvt-vault-service
             port:
-              number: 5000 #80
+              number: 3000 #80
