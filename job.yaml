@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: pe-wa-job
+  name: pvt-vault-job
 spec:
   template:
     spec:
       containers:
-      - name: pe-wa-job
-        image: yash5090/pe-wa:latest
+      - name: pvt-vault-job
+        image: yash5090/pvt-vault:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
       restartPolicy: OnFailure
